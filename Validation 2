@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration and Login Validation</title>
+<script>
+function validateRegistration() {
+  let name = document.getElementById("name").value;
+  let password = document.getElementById("password").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+
+  if (!/^[a-zA-Z]{6,}<span class="math-inline">/\.test\(name\)\) \{
+alert\("Name should contain only alphabets and be at least 6 characters long\."\);
+return false;
+\}
+if \(password\.length < 6\) \{
+alert\("Password should be at least 6 characters long\."\);
+return false;
+\}
+if \(\!/^\[^\\s@\]\+@\[^\\s@\]\+\\\.\[^\\s@\]\+</span>/.test(email)) {
+    alert("Invalid email format. Please use name@domain.com format.");
+    return false;
+  }
+
+  if (!/^\d{10}<span class="math-inline">/\.test\(phone\)\) \{
+alert\("Phone number should contain 10 digits only\."\);
+return false;
+\}
+return true; // Form submission allowed if validation passes
+\}
+function validateLogin\(\) \{
+let email \= document\.getElementById\("loginEmail"\)\.value;
+let password \= document\.getElementById\("loginPassword"\)\.value;
+if \(\!/^\[^\\s@\]\+@\[^\\s@\]\+\\\.\[^\\s@\]\+</span>/.test(email)) {
+        alert("Invalid email format. Please use name@domain.com format.");
+        return false;
+      }
+    
+      if (password.length < 6) {
+        alert("Password should be at least 6 characters long.");
+        return false;
+      }
+    return true;
+}
+
+</script>
+</head>
+<body>
+
+<h2>Registration</h2>
+<form onsubmit="return validateRegistration()">
+  Name: <input type="text" id="name" required><br><br>
+  Password: <input type="password" id="password" required><br><br>
+  Email: <input type="email" id="email" required><br><br>
+  Phone: <input type="tel" id="phone" required><br><br>
+  <input type="submit" value="Register">
+</form>
+
+<h2>Login</h2>
+<form onsubmit="return
